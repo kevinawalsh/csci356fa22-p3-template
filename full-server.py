@@ -464,7 +464,7 @@ def handle_http_connection(conn):
 
             # GET /shared-files.html
             # GET /shared-files.html?status=Some+message+to+be+displayed+on_page
-            if req.method == "GET" and req.path == "/shared-files.html":
+            elif req.method == "GET" and req.path == "/shared-files.html":
                 status = None
                 if "status" in req.params:
                     status = req.params["status"]
